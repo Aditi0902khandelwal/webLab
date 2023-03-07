@@ -196,38 +196,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <button class="button button3" ><a href="https://aditi0902khandelwal.github.io/webLab/login/form.html">form button</a></button>
            
          <!-- banner section start -->
-         <div>This is where the view_item_list form would go</div>
-    <button id="view_item_list">View Items</button>
+         div>This is where the purchase form would go</div>
+    <button id="purchase">Purchase</button>
     <script>
-    document.getElementById("view_item_list").addEventListener("click", function () {
-        gtag("event", "view_item_list", {
-                // This view_item_list event uses a different transaction ID
+    document.getElementById("purchase").addEventListener("click", function () {
+        gtag("event", "purchase", {
+                // This purchase event uses a different transaction ID
                 // from the previous purchase event so Analytics
                 // doesn't deduplicate the events.
                 // Learn more: https://support.google.com/analytics/answer/12313109
-  
-               
-                currency: "INR",
-               
+                transaction_id: "T_12345_2",
+                value: 25.42,
+                tax: 4.90,
+                shipping: 5.99,
+                currency: "USD",
+                coupon: "SUMMER_SALE",
                 items: [
                 {
-                  item_id: "ITM_12345",
-                  item_name: "Python",
-                  affiliation: "online_Course",
-                 
-                  discount: 100,
+                  item_id: "SKU_12345",
+                  item_name: "Stan and Friends Tee",
+                  affiliation: "Google Merchandise Store",
+                  coupon: "SUMMER_FUN",
+                  discount: 2.22,
                   index: 0,
-                  item_brand: "MOOC",
-                  item_category: "Python"
-                  item_category2: "ML",
-                  item_category3: "DS",
-                  item_category4: "CS",
+                  item_brand: "Google",
+                  item_category: "Apparel",
+                  item_category2: "Adult",
+                  item_category3: "Shirts",
+                  item_category4: "Crew",
                   item_category5: "Short sleeve",
                   item_list_id: "related_products",
                   item_list_name: "Related Products",
-                  item_variant: "Online",
+                  item_variant: "green",
                   location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
-                  price:  5000,
+                  price: 9.99,
                   quantity: 1
                 }]
           });
