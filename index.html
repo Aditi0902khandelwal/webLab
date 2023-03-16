@@ -278,15 +278,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button id="add_to_cart">Add to Cart</button>
          <script>
         document.getElementById("add_to_cart").addEventListener("click", function () {
-        gtag("event", "add_to_cart",
+        gtag("event", "add_to_cart",{
         dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
         dataLayer.push({
 	    event: "add_to_wishlist", 
 	ecommerce: {
        currency: "USD",
        value: 7.77,
-       items: 
-    {
+       items: [
+	{
       item_id: "SKU_12345",
       item_name: "Stan and Friends Tee",
       affiliation: "Google Merchandise Store",
@@ -305,9 +305,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
       price: 9.99,
       quantity: 1
-    }
-	}
-	)});
+	     } ]
+	}});
+	
 								
   });
 	      </script>
